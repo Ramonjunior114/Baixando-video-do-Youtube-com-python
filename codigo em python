@@ -1,0 +1,10 @@
+#importando biblioteca 
+from pytube import YouTube
+
+#inserir o link para dowload 
+link = input("Adicione a url do video:")
+video = YouTube(link)
+
+#baixar video em alta resolucao
+streaming = video.streams.get_highest_resolution()
+streaming.download()
